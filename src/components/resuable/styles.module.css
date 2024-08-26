@@ -1,0 +1,136 @@
+.card_container {
+    width: 30%;
+    height: 80%;
+    position: relative;
+    border: 1px dotted white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow:
+        rgba(17, 17, 26, 0.1) 0px 1px 0px,
+        rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    transition: all 0.3s ease-in-out;
+}
+.card_container:hover {
+    scale: 1.1;
+}
+
+.card_container .image {
+    width: 20%;
+    height: 30%;
+}
+
+.card_container .image img {
+    width: 100%;
+}
+
+.card_container .text {
+    width: 60%;
+}
+.card_container .text img {
+    width: 100%;
+}
+
+.spinner_container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.spinner_container .image {
+    width: 30%;
+}
+.spinner_container .image img {
+    width: 100%;
+}
+
+.spinner_container .text h3 {
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #231557 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   background-clip: text;
+   text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+       font-size: 28px;
+ }
+ 
+ @keyframes textclip {
+   to {
+     background-position: 200% center;
+   }
+ }
+
+/* Tablets */
+@media only screen and (max-width: 1024px) {
+    .card_container {
+        width: 90%;
+        height: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
+    }
+    .card_container .image {
+        width: 30%;
+    }
+    .card_container .text {
+        width: 60%;
+    }
+    .card_container:hover {
+        scale: none;
+    }
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 768px) {
+    .spinner_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .spinner_container .image {
+        width: 70%;
+    }
+    .spinner_container .text h3{
+        font-size: 25px;
+    }
+}
+
+/* Small Phones */
+@media only screen and (max-width: 480px) {
+    .card_container {
+        width: 85%;
+    }
+    .card_container:hover {
+        scale: none;
+    }
+    .spinner_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .spinner_container .image {
+        width: 70%;
+    }
+    .spinner_container .text h3{
+        font-size: 20px;
+    }
+}
